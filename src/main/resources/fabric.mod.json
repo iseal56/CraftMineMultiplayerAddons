@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "craftminemultiplayeraddons",
+  "version": "${version}",
+  "name": "CraftMineMultiplayerAddons",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/craftminemultiplayeraddons/icon.png",
+  "environment": "server",
+  "entrypoints": {
+    "main": [
+      "dev.iseal.craftminemultiplayeraddons.CraftMineMultiplayerAddons"
+    ]
+  },
+  "mixins": [
+    "craftminemultiplayeraddons.mixins.json",
+    {
+      "config": "craftminemultiplayeraddons.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "accessWidener": "craftminemultiplayeraddons.accesswidener",
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "1.21.6-alpha.25.14.craftmine"
+  }
+}
